@@ -40,8 +40,8 @@ function un-set-env (){
 
 # Does some serious copying.
 function deep-cp (){
+  echo ">>>>>>>>>>>>>>>> Trying to copy from $1  TO  $2"  #EDGAR
   find -H $1 -maxdepth 1 -name '.*' -a \( -type d -o -type f -o -type l \) -exec cp -a '{}' $2 \;
-  echo "Trying to copy from" $1/!(tmp)"to "$2  #EDGAR
   cp -r $1/!(tmp) $2
   # echo copying $1 to $2
 }
