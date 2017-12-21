@@ -35,19 +35,18 @@ source $BIN_DIR/utils
 APP_DIR='/app'
 TMP_APP_DIR=$CACHE_DIR/tmp_app_dir
 
-echo "TMP_APP_DIR   $TMP_APP_DIR"
+echo "TMP_APP_DIR   $TMP_APP_DIR"  #EDGAR
 
-if [ ! -d "$APP_DIR" ]; then
-  echo "Stupid dir does not exist"
-fi
+if [ ! -d "$APP_DIR" ]; then   #EDGAR
+  echo "Stupid dir does not exist"   #EDGAR
+fi  #EDGAR
 echo "#################################################################################################################"
 echo "#################################################################################################################"
-pwd
-find / -maxdepth 1 -type d
-ls -lthr /
-
 # Copy Anvil app dir to temporary storage...
 mkdir -p $TMP_APP_DIR
+
+ls -lthr /    #EDGAR
+
 deep-mv $APP_DIR $TMP_APP_DIR
 
 # Copy Application code in.
