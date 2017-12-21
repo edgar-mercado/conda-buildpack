@@ -40,7 +40,10 @@ echo "TMP_APP_DIR   $TMP_APP_DIR"
 if [ ! -d "$APP_DIR" ]; then
   echo "Stupid dir does not exist"
 fi
-ls /app -lthr
+echo "#################################################################################################################"
+echo "#################################################################################################################"
+pwd
+ls app -lthr
 
 # Copy Anvil app dir to temporary storage...
 mkdir -p $TMP_APP_DIR
