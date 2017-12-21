@@ -6,7 +6,6 @@
 
 
 # Fail fast and fail hard.
-echo "Testing......1"
 set -eo pipefail
 set -x
 # Prepend proper path for virtualenv hackery. This will be deprecated soon.
@@ -41,7 +40,7 @@ echo "TMP_APP_DIR   $TMP_APP_DIR"
 if [ ! -d "$APP_DIR" ]; then
   echo "Stupid dir does not exist"
 fi
-ls -lthr
+ls /app -lthr
 
 # Copy Anvil app dir to temporary storage...
 mkdir -p $TMP_APP_DIR
