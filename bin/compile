@@ -76,6 +76,8 @@ mkdir -p $CACHE_DIR
 
 # Restore old artifacts from the cache.
 echo "-------------------- $CACHED_DIRS"
+ls -lthr /app/support_heroku_buildpacks
+
 for dir in $CACHED_DIRS; do
   cp -R $CACHE_DIR/$dir . &> /dev/null || true
 done
