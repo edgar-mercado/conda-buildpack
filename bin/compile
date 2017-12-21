@@ -81,7 +81,10 @@ source $BIN_DIR/steps/conda_compile
 #
 
 # Store new artifacts in cache.
+  echo " 0000000000000 $CACHED_DIRS"
 for dir in $CACHED_DIRS; do
+  echo " 1111111111111 $CACHE_DIR/$dir"
+
   rm -rf $CACHE_DIR/$dir
   cp -R $dir $CACHE_DIR/
 done
